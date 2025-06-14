@@ -1,0 +1,8 @@
+C:\Users\gabri\source\repos\challenge-2-weeks\challenge-2-weeks\obj\Debug\challenge-2-weeks.csproj.AssemblyReference.cache
+C:\Users\gabri\source\repos\challenge-2-weeks\challenge-2-weeks\obj\Debug\challenge-2-weeks.csproj.CoreCompileInputs.cache
+C:\Users\gabri\source\repos\challenge-2-weeks\challenge-2-weeks\bin\Debug\challenge-2-weeks.exe.config
+C:\Users\gabri\source\repos\challenge-2-weeks\challenge-2-weeks\bin\Debug\challenge-2-weeks.exe
+C:\Users\gabri\source\repos\challenge-2-weeks\challenge-2-weeks\bin\Debug\challenge-2-weeks.pdb
+C:\Users\gabri\source\repos\challenge-2-weeks\challenge-2-weeks\obj\Debug\challenge-2-weeks.exe
+C:\Users\gabri\source\repos\challenge-2-weeks\challenge-2-weeks\obj\Debug\challenge-2-weeks.pdb
+C:\Users\gabri\source\repos\challenge-2-weeks\challenge-2-weeks\obj\Debug\challenge-2-weeks.exe.config
