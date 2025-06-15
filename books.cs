@@ -2,13 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace challenge_2_weeks
+namespace library.book
 {
-    public class Books
+    public class Book
     {
-        List<Dictionary<string, string>> books = new List<Dictionary<string, string>>();
+        public string Title { get; set; }
+        public string Category { get; set; }
+        public int Value { get; set; }
+        public string Author { get; set; }
         
-        public void setBook()
+        /*public void setBook()
         {
             Dictionary<string, string> book = new Dictionary<string, string>();
 
@@ -30,17 +33,8 @@ namespace challenge_2_weeks
 
             books.Add(book);
             
-        }
-
-        public void getBooks()
-        {
-
-            foreach (var book in books)
-            {
-                Console.WriteLine(book);
-            }
-        }
-    }
+        */}
+    
 }
 
 
