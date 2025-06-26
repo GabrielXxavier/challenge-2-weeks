@@ -1,0 +1,26 @@
+button img{
+    padding-right: 0.3vw;
+    width: 1vw;
+
+
+}button {
+    padding: 1.3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+    background-color: #4a00a8;
+    color: #ffff;
+    border-radius: 5%;
+    border: none;
+    cursor: pointer;
+}
+#book-register{
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); /* semi-transparente */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

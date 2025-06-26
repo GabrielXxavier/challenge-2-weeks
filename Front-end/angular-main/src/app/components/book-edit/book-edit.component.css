@@ -1,0 +1,52 @@
+
+#book-edit{
+
+  top: 100%;  /* se for um popover, abaixo do botão */
+  left: 0;
+  width: 25vw; /* defina um tamanho fixo ou máximo */
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1vw;
+  border-radius: 5px;  /* mais suave e arredondado */
+  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+#book-edit-actions{
+    gap: 0.5vw;
+}
+#book-edit-confirmation{
+    width: 100%;
+    background-color: #4a00a8;
+    padding: 8px 20px;
+    border: 1px solid #4a00a8;
+    color: #ffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+#book-edit-cancel{
+    width: 100%;
+    background-color: #ffff;
+    padding: 8px 20px;
+    border-radius:5%;
+    border: 1px solid red;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+}
+input{
+    padding: 0.5vw;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    
+}

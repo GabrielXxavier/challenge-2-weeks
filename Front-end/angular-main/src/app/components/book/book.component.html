@@ -1,0 +1,22 @@
+<div id="book-list">
+    <div *ngFor="let book of books$ | async" id="book-card">
+        <h3>{{book.title}}</h3>
+        <div id="book-category-price">
+            <p>{{book.category}}</p>
+            <span><h4>R$: {{book.value}}</h4></span>
+            
+        </div>
+        <p><strong>Autor:</strong> {{book.author}}</p>
+        <div id="book-actions"> 
+            <button id="book-edit" type="button"  (click)="showEdit = true; bookEditSelected = book">Editar</button>
+            <button id="book-delete" type="button" (click)="showDelete = true ; bookDeleteSelected = (book)">Excluir</button>
+        </div>
+        
+    </div>
+    <div *ngIf="showDelete" id="book-delete-confirmation">
+        <app-book-delete (getShowDelete)="showDelete = $event" [book]="bookDeleteSelected"></app-book-delete>
+    </div>
+    <div *ngIf="showEdit" id="book-edit-confirmation">
+        <app-book-edit (getShowEdit)="showEdit = $event" [book]="bookEditSelected"></app-book-edit>
+    </div>
+<div>

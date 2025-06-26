@@ -1,0 +1,41 @@
+#book-delete{
+  top: 100%;  /* se for um popover, abaixo do botão */
+  left: 0;
+  width: 25vw; /* defina um tamanho fixo ou máximo */
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 12px; 
+  margin: 2vw; /* mais suave e arredondado */
+  
+
+}
+
+#book-delete-actions{
+    margin-top: 2vh;
+    width: 100%;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    justify-content: flex-end;
+}
+#book-delete-confirm{
+    width: 25%;
+    background-color: red;
+    padding: 8px 20px;
+    border-radius: 5%;
+    border: 1px solid #4a00a8;
+    color: #ffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+#book-delete-cancel{
+    width: 25%;
+    background-color: #ffff;
+    padding: 8px 20px;
+    border-radius:5%;
+    border: 1px solid #4a00a8;
+    color: #4a00a8;
+    font-size: 16px;
+    cursor: pointer;
+}
