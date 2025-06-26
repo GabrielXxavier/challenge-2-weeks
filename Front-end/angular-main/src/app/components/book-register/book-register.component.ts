@@ -29,7 +29,7 @@ export class BookRegisterComponent {
   postBook() {
 
     const book: Book = {
-      id: "b27e822c-c217-4024-879b-77d9c79d71a1",
+      id: "b27e822c-c217-4024-879b-71d9c79d71a1",
       title: this.title,
       author: this.author,
       category: this.category,
@@ -39,7 +39,11 @@ export class BookRegisterComponent {
       alert('Por favor, preencha todos os campos corretamente.');
       return;
     }
-    this.bookService.postBook(book);
+    this.bookService.postBook(book).subscribe(() => {;
+      this.onCancel();
+      this.bookService.triggerRefresh();
+    })
+    
     
   }
 }

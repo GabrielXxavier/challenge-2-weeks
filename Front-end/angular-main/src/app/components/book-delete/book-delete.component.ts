@@ -21,7 +21,8 @@ export class BookDeleteComponent {
   DeleteBook() {
     
     this.bookService.deleteBook(this.book?.id).subscribe(() => {
-      this.onCancel()
+      this.getShowDelete.emit(false);
+      this.bookService.triggerRefresh()
     });
       
   }
