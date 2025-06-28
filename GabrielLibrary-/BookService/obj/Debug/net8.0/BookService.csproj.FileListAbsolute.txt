@@ -1,0 +1,16 @@
+C:\Users\gabri\Downloads\GabrielLibrary\GabrielLibrary\BookService\bin\Debug\net8.0\BookService.deps.json
+C:\Users\gabri\Downloads\GabrielLibrary\GabrielLibrary\BookService\bin\Debug\net8.0\BookService.dll
+C:\Users\gabri\Downloads\GabrielLibrary\GabrielLibrary\BookService\bin\Debug\net8.0\BookService.pdb
+C:\Users\gabri\Downloads\GabrielLibrary\GabrielLibrary\BookService\bin\Debug\net8.0\Domain.dll
+C:\Users\gabri\Downloads\GabrielLibrary\GabrielLibrary\BookService\bin\Debug\net8.0\Domain.pdb
+C:\Users\gabri\Downloads\GabrielLibrary\GabrielLibrary\BookService\obj\Debug\net8.0\BookService.csproj.AssemblyReference.cache
+C:\Users\gabri\Downloads\GabrielLibrary\GabrielLibrary\BookService\obj\Debug\net8.0\BookService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\Downloads\GabrielLibrary\GabrielLibrary\BookService\obj\Debug\net8.0\BookService.AssemblyInfoInputs.cache
+C:\Users\gabri\Downloads\GabrielLibrary\GabrielLibrary\BookService\obj\Debug\net8.0\BookService.AssemblyInfo.cs
+C:\Users\gabri\Downloads\GabrielLibrary\GabrielLibrary\BookService\obj\Debug\net8.0\BookService.csproj.CoreCompileInputs.cache
+C:\Users\gabri\Downloads\GabrielLibrary\GabrielLibrary\BookService\obj\Debug\net8.0\BookServ.C69B37D4.Up2Date
+C:\Users\gabri\Downloads\GabrielLibrary\GabrielLibrary\BookService\obj\Debug\net8.0\BookService.dll
+C:\Users\gabri\Downloads\GabrielLibrary\GabrielLibrary\BookService\obj\Debug\net8.0\refint\BookService.dll
+C:\Users\gabri\Downloads\GabrielLibrary\GabrielLibrary\BookService\obj\Debug\net8.0\BookService.pdb
+C:\Users\gabri\Downloads\GabrielLibrary\GabrielLibrary\BookService\obj\Debug\net8.0\ref\BookService.dll
+C:\Users\gabri\Downloads\GabrielLibrary\GabrielLibrary\BookService\obj\Debug\net8.0\BookService.sourcelink.json
