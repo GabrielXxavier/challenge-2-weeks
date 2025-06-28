@@ -9,7 +9,7 @@ import { BookEditComponent } from './components/book-edit/book-edit.component';
 import { ButtonBookRegisterComponent } from './components/button-book-register/button-book-register.component';
 import { BookRegisterComponent } from './components/book-register/book-register.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -26,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     AppRoutingModule,
     BookDeleteComponent,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

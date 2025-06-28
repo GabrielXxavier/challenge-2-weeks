@@ -1,24 +1,36 @@
 <div id="book-register">
     <h3>Registrar Livro</h3>
-    <form>
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
         <div>
             <label for="title">Título:</label>
-            <input type="text" id="title" [(ngModel)]="title" name="title"/>
+            <input type="text" id="title"  formControlName="title"  name="title"/>
+            <span *ngIf="bookForm.get('title')!.touched && bookForm.get('title')!.invalid">
+                Email é obrigatorio.
+            </span>
         </div>
         <div>
             <label for="author">Autor:</label>
-            <input id="author" [(ngModel)]="author" name="author"/>
+            <input id="author" formControlName="author" name="author"/>
+            <span *ngIf="bookForm.get('author')!.touched && bookForm.get('author')!.invalid">
+                Nome do autor é obrigatorio.
+            </span>
         </div>
         <div>
             <label for="category">Categoria:</label>
-            <input id="category" [(ngModel)]="category" name="category"/>
+            <input id="category" formControlName="category" name="category"/>
+            <span *ngIf="bookForm.get('category')!.touched && bookForm.get('category')!.invalid">
+                Categoria é obrigatoria.
+            </span>
         </div>
         <div>
             <label for="value">Valor:</label>
-            <input id="value" type="number" [(ngModel)]="value" name="value"/>
+            <input id="value" type="number" formControlName="value" name="value"/>
+            <span *ngIf="bookForm.get('value')!.touched && bookForm.get('value')!.invalid">
+                Valor é obrigatorio.
+            </span>
         </div>
         <div id="book-register-actions">
-            <button id="book-register-confirmation" type="button" (click)="postBook()">Registrar</button>
+            <button [disabled]="!bookForm.valid" id="book-register-confirmation" type="submit" >Registrar</button>
             <button id="book-register-cancel" (click)="onCancel()">Cancelar</button>
         </div>    
     </form>

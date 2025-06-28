@@ -16,15 +16,18 @@ export class BookComponent {
     showEdit: boolean = false;
 
     bookDeleteSelected?: Book;
-    bookEditSelected: Book | undefined;
+    bookEditSelected?: Book ;
 
     books$: Observable<Book[]>;
-
+    
+    
     constructor(private bookService: BookService) {
       this.books$ = this.bookService.getBooks();
+      
       this.bookService.refresh$.subscribe(() => {
         this.books$ = this.bookService.getBooks();
       });
+      
     }
 
     

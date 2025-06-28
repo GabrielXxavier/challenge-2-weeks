@@ -12,14 +12,5 @@ import { Book } from './models/book.model';
 })
 export class AppComponent {
   title = 'angular-main';
-  books: Book[] = [];
-
-  constructor(private bookService: BookService) {
-    console.log(this.getBooks())
-  }
-
-  getBooks() {
-    this.bookService.getBooks()
-    .subscribe(books => this.books = books);
-  }
+  
 }

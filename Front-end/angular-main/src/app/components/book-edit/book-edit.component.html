@@ -1,24 +1,24 @@
-<div id="book-edit">
+<div  id="book-edit">
     <h3>Editar Livro</h3>
-    <form *ngIf="book">
+    <form [formGroup]="bookEditForm" *ngIf="book">
         <div>
             <label for="title">Título:</label>
-            <input id="title" name="title" [(ngModel)]="book.title" />
+            <input id="title" formControlName="title" name="title"/>
         </div>
         <div>
             <label for="author">Autor:</label>
-            <input id="author" name="author" [(ngModel)]="book.author"/>
+            <input id="author" formControlName="author" name="author"/>
         </div>
         <div>
             <label for="category">Categoria:</label>
-            <input id="category" name="category" [(ngModel)]="book.category" />
+            <input id="category" formControlName="category" name="category"/>
         </div>
         <div>
             <label for="value">Valor:</label>
-            <input id="value" type="number" name="value" [(ngModel)]="book.value"/>
+            <input id="value" type="number" formControlName="value" name="value"/>
         </div>
         <div id="book-edit-actions">
-            <button id="book-edit-confirmation" (click)="putBook()">Salvar</button>
+            <button id="book-edit-confirmation" (click)="onSubmit()">Salvar</button>
             <button id="book-edit-cancel" (click)="onCancel()">Cancelar</button>
         </div>    
     </form>

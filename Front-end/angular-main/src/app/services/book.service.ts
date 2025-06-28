@@ -11,7 +11,7 @@ export class BookService {
 
     refreshSubject = new Subject<void>();
 
-    private apiUrl = environment.bookApiUrl;
+    private apiUrl = environment.bookApiUrl + '/Books';
     constructor(private httpClient: HttpClient) {
         this.httpClient = httpClient;
     }
@@ -35,7 +35,7 @@ export class BookService {
     deleteBook(id: string | undefined) {
         return this.httpClient.delete(`${this.apiUrl}?id=${id}`);
     }
-    putBook(book: Book | undefined) {
+    putBook(book: Book) {
         return this.httpClient.put<Book>(this.apiUrl, book);
     }
 }
