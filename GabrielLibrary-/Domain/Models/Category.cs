@@ -10,5 +10,6 @@
             Guid id = Guid.NewGuid();
             Name = name;
         }
+        public Category() { }
     }
 }

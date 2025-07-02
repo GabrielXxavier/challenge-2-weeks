@@ -1,8 +1,8 @@
 <div id="book-list">
-    <div *ngFor="let book of books$ | async" id="book-card">
+    <div *ngFor="let book of books$ | async" id="book-card">    
         <h3>{{book.title}}</h3>
         <div id="book-category-price">
-            <p>{{book.category}}</p>
+            <p>{{book.category.name }}</p>
             <span><h4>R$: {{book.value}}</h4></span>
             
         </div>

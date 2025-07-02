@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\LibraryWeb\\LibraryWeb.csproj": {}
+    "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\BookService\\BookService.csproj": {
+    "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\BookService\\BookService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\BookService\\BookService.csproj",
+        "projectUniqueName": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\BookService\\BookService.csproj",
         "projectName": "BookService",
-        "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\BookService\\BookService.csproj",
+        "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\BookService\\BookService.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\BookService\\obj\\",
+        "outputPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\BookService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\Domain\\Domain.csproj"
+              "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\Domain\\Domain.csproj"
               }
             }
           }
@@ -54,9 +54,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[9.0.4, )"
             }
           },
           "imports": [
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\Domain\\Domain.csproj": {
+    "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -150,14 +150,14 @@
         }
       }
     },
-    "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\LibraryWeb\\LibraryWeb.csproj": {
+    "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\LibraryWeb\\LibraryWeb.csproj",
+        "projectUniqueName": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj",
         "projectName": "LibraryWeb",
-        "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\LibraryWeb\\LibraryWeb.csproj",
+        "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\LibraryWeb\\obj\\",
+        "outputPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\LibraryWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -178,11 +178,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\BookService\\BookService.csproj": {
-                "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\BookService\\BookService.csproj"
+              "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\BookService\\BookService.csproj": {
+                "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\BookService\\BookService.csproj"
               },
-              "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary\\Domain\\Domain.csproj"
+              "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\Domain\\Domain.csproj"
               }
             }
           }
@@ -211,17 +211,13 @@
               "target": "Package",
               "version": "[5.3.0, )"
             },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "target": "Package",
-              "version": "[8.0.10, )"
-            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.4, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[9.0.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

@@ -25,7 +25,7 @@ export class BookEditComponent {
         id : [this.book?.id],
         title: [this.book?.title, [Validators.required, Validators.minLength(3)]],
         author: [this.book?.author , [Validators.required, Validators.minLength(3)]],
-        category: [this.book?.category , [Validators.required, Validators.minLength(3)]],
+        category: [this.book?.category?.name , [Validators.required, Validators.minLength(3)]],
         value: [this.book?.value , [Validators.required, Validators.min(0.01)]]
     }) 
     }

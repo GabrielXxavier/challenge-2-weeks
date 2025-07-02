@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using LibraryWeb.DTOs;
-using LibraryWeb.DTOs.BookDTOs;
-using System.Web.Http.Routing;
 using Domain.Models;
+using Domain.DTOs.Book;
 using Domain.Interfaces;
 
 
@@ -21,7 +19,7 @@ namespace LibraryWeb.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Book>> List()
+        public async Task<List<ListBookDto>> List()
         {
             return await _service.List();
         }

@@ -4,19 +4,20 @@ namespace Domain.Models
 {
     public class Book
     {
-        public Guid Id { get; init; }
+        public Guid Id { get; set; }
         public string Title { get; set; }
         public string Author { get; set; }
-        public string Category { get; set; }
-        public int Value { get; set; }
+        public Guid Category_id { get; set; }
+        public decimal Value { get; set; }
 
-        public Book(string title, string author, string category, int value)
+        public Book(string title, string author, Guid category_id, decimal value)
         {
             Guid id = Guid.NewGuid();
             Title = title;
             Author = author;
-            Category = category;
+            Category_id = category_id;
             Value = value;
         }
+        public Book() { }
     }
 }

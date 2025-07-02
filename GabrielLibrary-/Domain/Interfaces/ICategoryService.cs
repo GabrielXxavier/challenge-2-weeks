@@ -8,6 +8,7 @@ namespace Domain.Interfaces
         Task<List<Category>> List();
         Task<ResponseModel<Category>> Add(Category book);
         Task<ResponseModel<Category>> Update(Category book);
-        Task<ResponseModel<Category>> Delete(Category id);
+        Task<ResponseModel<Category>> Delete(Guid id);
+        Task<Category> GetById(Guid id);
     }
 }

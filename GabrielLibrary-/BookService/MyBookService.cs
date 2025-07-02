@@ -1,4 +1,5 @@
 ﻿using BookService.Data;
+using Domain.DTOs.Book;
 using Domain.Interfaces;
 using Domain.Models;
 using LibraryModel;
@@ -10,9 +11,11 @@ namespace BookService
     public class MyBookService : IBookService
     {
         private readonly ApplicationDbContext _context;
+        private readonly ICategoryService _categoryService;
 
-        public MyBookService(ApplicationDbContext context)
+        public MyBookService(ApplicationDbContext context, ICategoryService categoryService)
         {
+            _categoryService = categoryService;
             _context = context;
         }
 
@@ -49,10 +52,30 @@ namespace BookService
 
         }
 
-        public async Task<List<Book>> List()
+        public async Task<List<ListBookDto>> List()
         {
-          
-            return await _context.Book.ToListAsync();
+            var books = await _context.Book.ToListAsync();
+
+            List<ListBookDto> response = new List<ListBookDto>();
+
+            try { 
+                foreach (var book in books) {
+                    var category = await _categoryService.GetById(book.Category_id);
+                    response.Add(new ListBookDto
+                    {
+                        Id = book.Id,
+                        Title = book.Title,
+                        Author = book.Author,
+                        Category = category,
+                        Value = book.Value
+                    });
+                }
+           }catch (Exception ex)
+            {
+                throw new Exception("Error retrieving books: " + ex.Message);
+            }
+
+            return response;
         }
 
         public async Task<ResponseModel<Book>> Update(Book book)

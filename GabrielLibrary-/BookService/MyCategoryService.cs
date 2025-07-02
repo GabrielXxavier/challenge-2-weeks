@@ -2,6 +2,7 @@
 using Domain.Interfaces;
 using Domain.Models;
 using LibraryModel;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookService
 {
@@ -14,24 +15,119 @@ namespace BookService
             _context = context;
         }
 
-        public Task<ResponseModel<Category>> Add(Category book)
+        public async Task<ResponseModel<Category>> Add(Category category)
         {
-            throw new NotImplementedException();
+
+            ResponseModel<Category> response = new ResponseModel<Category>();
+            if (category == null)
+            {
+                response.Message = "Category cannot be null";
+                response.Status = false;
+                return response;
+            }
+
+
+            try
+            {
+                await _context.Category.AddAsync(category);
+                await _context.SaveChangesAsync();
+
+                response.Message = "Livro Adicionado";
+                response.Status = true;
+                response.Data = category;
+                return response;
+
+            }
+            catch (Exception ex)
+            {
+
+                response.Message = ex.Message;
+                response.Status = false;
+                return response;
+            }
+
+
         }
 
-        public Task<ResponseModel<Category>> Delete(Category id)
+        public async Task<ResponseModel<Category>> Delete(Guid id)
         {
-            throw new NotImplementedException();
+            ResponseModel<Category> response = new ResponseModel<Category>();
+
+            var category = _context.Category.FirstOrDefault(c => c.Id == id);
+
+            if (category != null)
+            {
+                try
+                {
+                    _context.Category.Remove(category);
+                    await _context.SaveChangesAsync();
+
+                    response.Message = "Categoria deletada";
+                    response.Status = false;
+                    response.Data = category;
+                    return response;
+
+                }
+
+                catch (Exception ex)
+                {
+                    response.Message = ex.Message;
+                    response.Status = false;
+                    return response;
+
+                }
+            }
+
+            response.Message = "Categoria não encontrada";
+            response.Status = false;
+            response.Data = category;
+            return response;
+
         }
 
-        public Task<List<Category>> List()
+        public async Task<List<Category>> List()
         {
-            throw new NotImplementedException();
+            return await _context.Category.ToListAsync();
         }
 
-        public Task<ResponseModel<Category>> Update(Category book)
+        public async Task<ResponseModel<Category>> Update(Category category)
         {
-            throw new NotImplementedException();
+            ResponseModel<Category> response = new ResponseModel<Category>();
+
+            if (await _context.Category.AnyAsync(c => c.Id == category.Id))
+            {
+                try
+                {
+                    _context.Category.Update(category);
+                    await _context.SaveChangesAsync();
+                    response.Message = "Categoria Atualizado";
+                    response.Status = true;
+                    response.Data = category;
+                    return response;
+
+                }
+                catch (Exception ex)
+                {
+                    response.Message = ex.Message;
+                    response.Status = true;
+                    return response;
+                }
+            }
+            else
+            {
+                response.Message = "Não encontrado";
+                response.Status = false;
+                response.Data = category;
+                return response;
+            }
+        }
+        public async Task<Category> GetById(Guid id)
+        {
+            var category = await _context.Category.FirstOrDefaultAsync(c => c.Id == id);
+
+            return category;
         }
     }
+    
+
 }

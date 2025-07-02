@@ -1,3 +1,4 @@
+
 <div id="book-register">
     <h3>Registrar Livro</h3>
     <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
@@ -17,10 +18,16 @@
         </div>
         <div>
             <label for="category">Categoria:</label>
-            <input id="category" formControlName="category" name="category"/>
+            <p-dropdown  formControlName="category" [options]="listCategories" optionLabel="name"></p-dropdown>
             <span *ngIf="bookForm.get('category')!.touched && bookForm.get('category')!.invalid">
                 Categoria é obrigatoria.
             </span>
+            <p-button
+    label="Mostrar Saudação"
+    icon="pi pi-smile"
+
+    class="p-button-success mt-2"
+  ></p-button>
         </div>
         <div>
             <label for="value">Valor:</label>
