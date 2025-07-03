@@ -5,7 +5,7 @@ import {FormBuilder, Validator, Validators} from '@angular/forms';
 import { Category } from 'src/app/models/category.model';
 import { CategoryService } from 'src/app/services/category.service';
 import { Observable } from 'rxjs';
-import { DropdownModule } from 'primeng/dropdown';
+
 
 
 @Component({
@@ -14,28 +14,21 @@ import { DropdownModule } from 'primeng/dropdown';
   styleUrls: ['./book-register.component.css']
 })
 export class BookRegisterComponent { 
+  constructor(private bookService: BookService, private fb: FormBuilder, private categoryService: CategoryService) {
+    
+  }
   
   listCategories: [] | undefined | string | any;
+  categories$!: Observable<Category[]> | undefined ;
+
   ngOnInit() {
-    this.listCategories = [
-      {name: 'Ficção'},
-      {name: 'Não-ficção'},
-      {name: 'Fantasia'},
-      {name: 'Romance'},
-      {name: 'Aventura'},
-      {name: 'Mistério'},
-      {name: 'Ciência'},
-      {name: 'História'},
-      {name: 'Biografia'}
-    ];
+    this.categories$ = this.categoryService.getCategories();
+    this.categories$.subscribe(cats => console.log('Categorias recebidas:', cats));
   }
+  
+  
 
   
-  constructor(private bookService: BookService, private fb: FormBuilder, private categoryService: CategoryService) {
-    this.categories$ = this.categoryService.getCategories();
-  }
-
-  categories$: Observable<Category[]>;
   @Output() getShowRegister = new EventEmitter<boolean>();
 
   bookForm = this.fb.group({
@@ -53,10 +46,10 @@ export class BookRegisterComponent {
   }
 
   onSubmit() {
-    //this.bookForm.value.category as Category; 
-    //this.bookService.postBook().subscribe(() => {
-   ////   this.onCancel();
- //     this.bookService.triggerRefresh();
-//})
+    console.log( 'valor do category form' + this.bookForm.value.category)
+    this.bookService.postBook(this.bookForm.value as unknown as Book).subscribe(() => {
+    this.onCancel();
+     this.bookService.triggerRefresh();
+  })
   }
 }

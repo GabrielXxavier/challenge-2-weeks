@@ -5,7 +5,7 @@ import { BookService } from 'src/app/services/book.service';
 
 @Component({
   selector: 'app-book-delete',
-  standalone: true,
+  standalone: false,
   templateUrl: './book-delete.component.html',
   styleUrls: ['./book-delete.component.css']
 })

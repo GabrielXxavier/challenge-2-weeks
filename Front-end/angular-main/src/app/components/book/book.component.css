@@ -11,10 +11,10 @@
 }
 #book-card{
     margin-right: 1vw;
-    margin-top: 20px;
+    margin-top: 5vh;
     padding: 1vw;
-    width: 20vw;
-    height: 20vh;
+    min-width: 20vw;
+    min-height: 20vh;
     background-color: #ffff;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -23,17 +23,15 @@
     margin-bottom : 4vh;
 }
 #book-category-price{
-    gap: 2vw;
     display: flex;
     align-items: center;
     margin-bottom : 2vh;
+    justify-content: space-between;
 }
 
 #book-category-price p{
     
-    border-radius: 20%;
     color: #4a00a8;
-    margin-right: 2vw;
     font-size: 16px;
 }
 #book-category-price span h4{

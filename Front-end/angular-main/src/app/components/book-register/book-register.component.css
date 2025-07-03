@@ -18,6 +18,15 @@ form {
 #book-register-actions{
     gap: 0.5vw;
 }
+#book-register-category{
+    display: flex;
+    flex-direction: row;
+}
+p-dropdown{
+    width: 100%;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+}
 #book-register-confirmation{
     width: 100%;
     background-color: #4a00a8;

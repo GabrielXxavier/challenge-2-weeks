@@ -50,10 +50,9 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles.css",
               "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-              "node_modules/primeng/resources/primeng.min.css",
-              "node_modules/primeicons/primeicons.css",
-              "src/styles.css"
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           },
@@ -79,13 +78,7 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.development.ts"
-                }
-              ]
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -128,5 +121,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "acc928e4-ab3e-49d7-bdc9-6f00b2bcb65c"
   }
 }
