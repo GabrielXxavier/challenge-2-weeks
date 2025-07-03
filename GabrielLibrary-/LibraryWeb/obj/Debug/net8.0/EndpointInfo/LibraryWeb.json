@@ -50,17 +50,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Book"
+                "$ref": "#/components/schemas/AddBookDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Book"
+                "$ref": "#/components/schemas/AddBookDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Book"
+                "$ref": "#/components/schemas/AddBookDto"
               }
             }
           }
@@ -79,17 +79,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Book"
+                "$ref": "#/components/schemas/PutBookDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Book"
+                "$ref": "#/components/schemas/PutBookDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Book"
+                "$ref": "#/components/schemas/PutBookDto"
               }
             }
           }
@@ -240,13 +240,9 @@
   },
   "components": {
     "schemas": {
-      "Book": {
+      "AddBookDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
           "title": {
             "type": "string",
             "nullable": true
@@ -255,9 +251,8 @@
             "type": "string",
             "nullable": true
           },
-          "category_id": {
-            "type": "string",
-            "format": "uuid"
+          "category": {
+            "$ref": "#/components/schemas/Category"
           },
           "value": {
             "type": "number",
@@ -297,6 +292,31 @@
           },
           "category": {
             "$ref": "#/components/schemas/Category"
+          },
+          "value": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PutBookDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "category": {
+            "$ref": "#/components/schemas/Category"
+          },
+          "author": {
+            "type": "string",
+            "nullable": true
           },
           "value": {
             "type": "number",

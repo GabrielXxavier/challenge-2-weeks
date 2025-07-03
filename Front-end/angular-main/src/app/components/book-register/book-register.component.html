@@ -3,37 +3,21 @@
     <h3>Registrar Livro</h3>
     <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
         <div>
-            <label for="title">Título:</label>
-            <input type="text" id="title"  formControlName="title"  name="title"/>
-            <span *ngIf="bookForm.get('title')!.touched && bookForm.get('title')!.invalid">
-                Email é obrigatorio.
-            </span>
+            <input pInputText ype="text" id="title"  placeholder="Titulo" formControlName="title"  name="title"/>
         </div>
         <div>
-            <label for="author">Autor:</label>
-            <input id="author" formControlName="author" name="author"/>
-            <span *ngIf="bookForm.get('author')!.touched && bookForm.get('author')!.invalid">
-                Nome do autor é obrigatorio.
-            </span>
+            <input pInputText id="author" placeholder="Autor" formControlName="author" name="author"/>
         </div>
-        <div>
-            <label for="category">Categoria:</label>
-            <p-dropdown  formControlName="category" [options]="(categories$ | async)!" optionLabel="name"></p-dropdown>
-            <span *ngIf="bookForm.get('category')!.touched && bookForm.get('category')!.invalid">
-                Categoria é obrigatoria.
-            </span>
-        
+        <div id="category"> 
+            <p-dropdown  placeholder="Categoria" formControlName="category" [options]="(categories$ | async)!" optionLabel="name"></p-dropdown>
         </div>
-        <div>
-            <label for="value">Valor:</label>
-            <input id="value" type="number" formControlName="value" name="value"/>
-            <span *ngIf="bookForm.get('value')!.touched && bookForm.get('value')!.invalid">
-                Valor é obrigatorio.
-            </span>
+        <div id="input-value">
+            <span class="p-inputgroup-addon">R$</span>
+            <input formControlName="value" type="number" pInputText placeholder="Price" step="0.00" />                
         </div>
         <div id="book-register-actions">
-            <button [disabled]="!bookForm.valid" id="book-register-confirmation" type="submit" >Registrar</button>
-            <button id="book-register-cancel" (click)="onCancel()">Cancelar</button>
+            <p-button styleClass="p-button-success" [disabled]="!bookForm.valid" id="book-register-confirmation" type="submit" >Registrar</p-button>
+            <p-button styleClass="p-button-danger" (click)="onCancel()">Cancelar</p-button>
         </div>    
     </form>
 </div>

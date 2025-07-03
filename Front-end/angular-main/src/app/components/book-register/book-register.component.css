@@ -16,54 +16,27 @@ form {
   gap: 1.5vw;
 }
 #book-register-actions{
+    justify-content: end;
+    display: flex;
+    flex-direction: row;
     gap: 0.5vw;
 }
-#book-register-category{
+#category{
+    display: flex;
+    flex-direction: column;
+}
+
+#input-value{
     display: flex;
     flex-direction: row;
 }
-p-dropdown{
+
+#input-value input{
     width: 100%;
-    margin-top: 0.5vw;
-    margin-bottom: 0.5vw;
-}
-#book-register-confirmation{
-    width: 100%;
-    background-color: #4a00a8;
-    padding: 8px 20px;
-    border: 1px solid #4a00a8;
-    color: #ffff;
-    font-size: 16px;
-    cursor: pointer;
-}
-#book-register-confirmation.disabled{
-    width: 100%;
-    background-color: #4a00a8;
-    padding: 8px 20px;
-    border: 1px solid #4a00a8;
-    color: #ffff;
-    font-size: 16px;
-    cursor: pointer;
-}
-#book-register-cancel{
-    width: 100%;
-    background-color: #ffff;
-    padding: 8px 20px;
-    border-radius:5%;
-    border: 1px solid red;
-    color: red;
-    font-size: 16px;
-    cursor: pointer;
-}
-input{
-    padding: 0.5vw;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
 }
 
 form div{
     display: flex;
     flex-direction: column;
-    
 }
+

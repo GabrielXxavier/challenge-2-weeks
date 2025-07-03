@@ -13,43 +13,35 @@ import { Observable } from 'rxjs';
   templateUrl: './book-register.component.html',
   styleUrls: ['./book-register.component.css']
 })
-export class BookRegisterComponent { 
-  constructor(private bookService: BookService, private fb: FormBuilder, private categoryService: CategoryService) {
-    
-  }
-  
+export class BookRegisterComponent {
+  @Output() getShowRegister = new EventEmitter<boolean>();
   listCategories: [] | undefined | string | any;
   categories$!: Observable<Category[]> | undefined ;
-
+ 
+  constructor(private bookService: BookService, private fb: FormBuilder, private categoryService: CategoryService) {}
+  
   ngOnInit() {
     this.categories$ = this.categoryService.getCategories();
-    this.categories$.subscribe(cats => console.log('Categorias recebidas:', cats));
+    this.categories$.subscribe(categories => console.log('Categorias recebidas:', categories));
   }
   
-  
-
-  
-  @Output() getShowRegister = new EventEmitter<boolean>();
-
   bookForm = this.fb.group({
     title: ['' , [Validators.required, Validators.minLength(3)]],
     author: ['' , [Validators.required, Validators.minLength(3)]],
     category: ['', [Validators.required, Validators.minLength(3)]],
-    value: [0 , [Validators.required, Validators.min(0.01)]]
+    value: [0.00 , [Validators.required, Validators.pattern('^[0-9]*$') , Validators.min(0.01)]]
+
   })
 
-  
-   
+  onSubmit() {
+    this.bookService.postBook(this.bookForm.value as unknown as Book).subscribe(() => {  //Deixar mais bonito 
+    this.onCancel();
+    this.bookService.triggerRefresh();
+     
+    })
+  }
 
   onCancel(){
     this.getShowRegister.emit(false);
-  }
-
-  onSubmit() {
-    console.log( 'valor do category form' + this.bookForm.value.category)
-    this.bookService.postBook(this.bookForm.value as unknown as Book).subscribe(() => {
-    this.onCancel();
-     this.bookService.triggerRefresh();
-  })
   }
 }

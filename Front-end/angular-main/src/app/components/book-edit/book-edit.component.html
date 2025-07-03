@@ -1,25 +1,22 @@
-<div  id="book-edit">
+<div id="book-edit">
     <h3>Editar Livro</h3>
-    <form [formGroup]="bookEditForm" *ngIf="book">
+    <form [formGroup]="bookEditForm" (ngSubmit)="onSubmit()">
         <div>
-            <label for="title">Título:</label>
-            <input id="title" formControlName="title" name="title"/>
+            <input pInputText ype="text" id="title"  placeholder="Titulo" formControlName="title"  name="title"/>
         </div>
         <div>
-            <label for="author">Autor:</label>
-            <input id="author" formControlName="author" name="author"/>
+            <input pInputText id="author" placeholder="Autor" formControlName="author" name="author"/>
         </div>
-        <div>
-            <label for="category">Categoria:</label>
-            <input id="category" formControlName="category" name="category"/>
+        <div id="category"> 
+            <p-dropdown  placeholder="Categoria" formControlName="category" [options]="(categories$ | async)!" optionLabel="name"></p-dropdown>
         </div>
-        <div>
-            <label for="value">Valor:</label>
-            <input id="value" type="number" formControlName="value" name="value"/>
+        <div id="input-value">
+            <span class="p-inputgroup-addon">R$</span>
+            <input formControlName="value" type="number" pInputText placeholder="Price" step="0.00" />                
         </div>
         <div id="book-edit-actions">
-            <button id="book-edit-confirmation" (click)="onSubmit()">Salvar</button>
-            <button id="book-edit-cancel" (click)="onCancel()">Cancelar</button>
+            <p-button styleClass="p-button-success" [disabled]="!bookEditForm.valid" id="book-register-confirmation" type="submit" >Registrar</p-button>
+            <p-button styleClass="p-button-danger" (click)="onCancel()">Cancelar</p-button>
         </div>    
     </form>
 </div>

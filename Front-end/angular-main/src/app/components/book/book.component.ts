@@ -13,7 +13,7 @@ import { CategoryService } from 'src/app/services/category.service';
   standalone: false
 })
 export class BookComponent {
-    constructor(private bookService: BookService, private categoryService: CategoryService) {
+    constructor(private bookService: BookService) {
       this.books$ = this.bookService.getBooks();
 
 

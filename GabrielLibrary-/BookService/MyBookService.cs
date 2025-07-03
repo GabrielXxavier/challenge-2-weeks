@@ -19,9 +19,10 @@ namespace BookService
             _context = context;
         }
 
-        public async Task<ResponseModel<Book>> Add(Book book)
+        public async Task<ResponseModel<Book>> Add(AddBookDto book)
         {
             ResponseModel<Book> response = new ResponseModel<Book>();
+            
 
             if (book == null)
             {
@@ -33,12 +34,21 @@ namespace BookService
 
             try
             {
-                await _context.Book.AddAsync(book);
+                
+                await _context.Book.AddAsync(new Book
+                {
+                    Id = Guid.NewGuid(),
+                    Title = book.Title,
+                    Author = book.Author,
+                    Category_id = book.Category.Id,
+                    Value = book.Value,
+
+                });
+
                 await _context.SaveChangesAsync();
         
                 response.Message = "Livro Adicionado";
                 response.Status = true;
-                response.Data = book;
                 return response;
                 
             }
@@ -78,24 +88,38 @@ namespace BookService
             return response;
         }
 
-        public async Task<ResponseModel<Book>> Update(Book book)
+        public async Task<ResponseModel<PutBookDto>> Update(PutBookDto book)
         {
-            ResponseModel<Book> response = new ResponseModel<Book>();
-            if (await _context.Book.AnyAsync(b => b.Id == book.Id))
+            ResponseModel<PutBookDto> response = new ResponseModel<PutBookDto>();
+
+            try
             {
-                _context.Book.Update(book);
-                await _context.SaveChangesAsync();
-                response.Message = "Livro Atualizado";
-                response.Status = true;
-                return response;
+
+                if (await _context.Book.AnyAsync(b => b.Id == book.Id))
+                {
+                    _context.Book.Update(new Book
+                    {
+                        Id = book.Id,
+                        Title = book.Title,
+                        Author = book.Author,
+                        Category_id = book.Category.Id,
+                        Value = book.Value,
+
+                    });
+                    await _context.SaveChangesAsync();
+                    response.Message = "Livro Atualizado";
+                    response.Status = true;
+                    return response;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                response.Message = "Não encontrado";
+                throw new Exception("Erro no servidor " + ex.Message);
+            }
+            response.Message = "Não encontrado";
                 response.Status = false;
-                response.Data = book;
                 return response;
-            }
+            
         }
 
         public async Task<ResponseModel<Book>> Delete(Guid id)

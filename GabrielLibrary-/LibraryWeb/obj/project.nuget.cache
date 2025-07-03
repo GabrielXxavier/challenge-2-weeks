@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+OxShaFD5I4=",
+  "dgSpecHash": "yKKDdytmC50=",
   "success": true,
-  "projectFilePath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj",
+  "projectFilePath": "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabri\\.nuget\\packages\\dotnetenv\\3.1.1\\dotnetenv.3.1.1.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
@@ -226,9 +226,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "O pacote 'Microsoft.AspNet.WebApi.Core 5.3.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net8.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
-      "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj",
+      "projectPath": "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj",
+      "filePath": "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj",
       "libraryId": "Microsoft.AspNet.WebApi.Core",
       "targetGraphs": [
         "net8.0"

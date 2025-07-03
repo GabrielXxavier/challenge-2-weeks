@@ -29,7 +29,7 @@
     "Parameters": [
       {
         "Name": "book",
-        "Type": "Domain.Models.Book",
+        "Type": "Domain.DTOs.Book.AddBookDto",
         "IsRequired": true
       }
     ],
@@ -45,7 +45,7 @@
     "Parameters": [
       {
         "Name": "book",
-        "Type": "Domain.Models.Book",
+        "Type": "Domain.DTOs.Book.PutBookDto",
         "IsRequired": true
       }
     ],

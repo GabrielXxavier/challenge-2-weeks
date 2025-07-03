@@ -26,7 +26,7 @@ namespace LibraryWeb.Controllers
 
         [HttpPost]
 
-        public async Task<IActionResult> Add([FromBody] Book book)
+        public async Task<IActionResult> Add([FromBody] AddBookDto book)
         {
             
             try
@@ -41,7 +41,7 @@ namespace LibraryWeb.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update([FromBody] Book book)
+        public async Task<IActionResult> Update([FromBody] PutBookDto book)
         {
             try
             {

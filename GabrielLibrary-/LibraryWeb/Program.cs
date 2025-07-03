@@ -24,7 +24,8 @@ namespace LibraryWeb
 
             
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                 options.UseNpgsql("Server=127.0.0.1;Port=5432;Database=library;User Id=postgres;Password=1209;"));
+                 options.UseNpgsql("Server=127.0.0.1;Port=5432;Database=library;User Id=postgres;Password=1209;")
+                 .EnableSensitiveDataLogging());
 
             builder.Services.AddScoped<IBookService, MyBookService>();
             builder.Services.AddScoped<ICategoryService, MyCategoryService>();

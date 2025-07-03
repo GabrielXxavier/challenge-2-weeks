@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj": {}
+    "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\BookService\\BookService.csproj": {
+    "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\BookService\\BookService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\BookService\\BookService.csproj",
+        "projectUniqueName": "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\BookService\\BookService.csproj",
         "projectName": "BookService",
-        "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\BookService\\BookService.csproj",
+        "projectPath": "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\BookService\\BookService.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\BookService\\obj\\",
+        "outputPath": "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\BookService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\Domain\\Domain.csproj"
+              "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\Domain\\Domain.csproj"
               }
             }
           }
@@ -79,14 +80,14 @@
         }
       }
     },
-    "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\Domain\\Domain.csproj": {
+    "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -101,6 +102,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -150,14 +152,14 @@
         }
       }
     },
-    "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj": {
+    "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj",
+        "projectUniqueName": "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj",
         "projectName": "LibraryWeb",
-        "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj",
+        "projectPath": "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\LibraryWeb\\LibraryWeb.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\LibraryWeb\\obj\\",
+        "outputPath": "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\LibraryWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -172,17 +174,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\BookService\\BookService.csproj": {
-                "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\BookService\\BookService.csproj"
+              "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\BookService\\BookService.csproj": {
+                "projectPath": "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\BookService\\BookService.csproj"
               },
-              "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\gabri\\Downloads\\GabrielLibrary\\GabrielLibrary-\\Domain\\Domain.csproj"
+              "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\gabri\\Documents\\Codes\\BookCsharp\\GabrielLibrary-\\Domain\\Domain.csproj"
               }
             }
           }
