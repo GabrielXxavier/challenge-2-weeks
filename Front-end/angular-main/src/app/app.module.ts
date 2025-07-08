@@ -8,7 +8,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
-import { BookModules } from './modules/book.module'
+import { BookModules } from './modules/book.module';
+import { ToastModule } from 'primeng/toast';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { BookModules } from './modules/book.module'
     BrowserAnimationsModule,
     DropdownModule,
     ButtonModule,
-    BookModules
+    BookModules,
+    ToastModule
     
   ],
   providers: [],

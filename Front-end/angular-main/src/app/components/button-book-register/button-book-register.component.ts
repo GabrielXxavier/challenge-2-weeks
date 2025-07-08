@@ -14,5 +14,4 @@ export class ButtonBookRegisterComponent {
     this.showRegister = event;
   }
 
-  
 }

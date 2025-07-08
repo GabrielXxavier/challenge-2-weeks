@@ -13,31 +13,35 @@ import { CategoryService } from 'src/app/services/category.service';
   standalone: false
 })
 export class BookComponent {
+  showDelete: boolean = false;
+  showEdit: boolean = false;
+
+  bookDeleteSelected?: Book;
+  bookEditSelected?: Book ;
+
+  books$: Observable<Book[]> ;
+
+  cols: Object[] = [
+  { field: 'name', header: 'Nome' },
+  { field: 'category', header: 'Categoria' },  
+  { field: 'author', header: 'Autor' },
+  { field: 'value', header: 'Valor' }
+];
+
     constructor(private bookService: BookService) {
-      this.books$ = this.bookService.getBooks();
-
-
+      this.books$ = this.bookService.getBooks()
       this.bookService.refresh$.subscribe(() => {
         this.books$ = this.bookService.getBooks();
+        console.log(this.books$)
       });
-      
-    }
 
-    showDelete: boolean = false;
-    showEdit: boolean = false;
-
-    bookDeleteSelected?: Book;
-    bookEditSelected?: Book ;
-
-    books$: Observable<Book[]>;
-    
-    
-    
-    
-    getShowEdit(event: boolean) {
-        this.showDelete = true;
     }
-    getShowDelete(event: boolean) {
-        this.showDelete = true;
-    }
+  
+  getShowEdit(event: boolean) {
+    this.showDelete = true;
+  }
+
+  getShowDelete(event: boolean) {
+    this.showDelete = true;
+  }
 }

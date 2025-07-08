@@ -1,8 +1,8 @@
-<button (click)="showRegister = true"
-        class="button-book-registre">
-    <img src="../../../assets/icons/icons8-plus.svg" alt="">
-    Registrar Livro
-</button>
+<p-button label="New"
+          icon="pi pi-plus"
+          class="mr-2"
+          (click)="showRegister = true">
+        </p-button>
 <div *ngIf="showRegister" id="book-register">
     <app-book-register (getShowRegister)="getShowRegister($event)"></app-book-register>
 </div>

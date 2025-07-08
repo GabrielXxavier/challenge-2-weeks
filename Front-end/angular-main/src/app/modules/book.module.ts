@@ -10,6 +10,11 @@ import { BookRegisterComponent } from '../components/book-register/book-register
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { TableModule } from 'primeng/table';
+import { MessageModule } from 'primeng/message';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
+  
 
 
 
@@ -21,13 +26,20 @@ import { ButtonModule } from 'primeng/button';
     BookRegisterComponent,
     BookDeleteComponent
   ],
+  providers : [
+    MessageService
+  ],
   imports: [
     CommonModule,
     DropdownModule,
     FormsModule,
     ReactiveFormsModule,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
+    TableModule,
+    MessageModule,
+    ToastModule
+
   ],
   exports: [
     BookComponent,

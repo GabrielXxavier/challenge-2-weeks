@@ -23,19 +23,19 @@ export class BookEditComponent {
 
   ngOnInit(){
     this.categories$ = this.categoryService.getCategories();
-    this.categories$.subscribe(categories => console.log('Categorias recebidas:', categories));
-  
-    
-      console.log(this.book);
-      this.bookEditForm = this.fb.group({
-        id : [this.book?.id],
-        title: [this.book?.title, [Validators.required, Validators.minLength(3)]],
-        author: [this.book?.author , [Validators.required, Validators.minLength(3)]],
-        category: ["" , [Validators.required, Validators.minLength(3)]],
-        value: [this.book?.value , [Validators.required, Validators.min(0.01)]]
+    this.categories$.subscribe();
+
+    this.bookEditForm = this.fb.group({
+      id : [this.book!.id],
+      title: [this.book!.title, [Validators.required, Validators.minLength(3)]],
+      author: [this.book!.author , [Validators.required, Validators.minLength(3)]],
+      category: [this.book?.category , [Validators.required, Validators.minLength(3)]],
+      value: [this.book!.value , [Validators.required, Validators.min(0.01)]]
+
       }) 
   };
 
+  
   onCancel() {
     this.getShowEdit.emit(false);
   };

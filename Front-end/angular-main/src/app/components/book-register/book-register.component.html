@@ -1,23 +1,27 @@
 
 <div id="book-register">
     <h3>Registrar Livro</h3>
+    <p-toast></p-toast>
     <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
         <div>
-            <input pInputText ype="text" id="title"  placeholder="Titulo" formControlName="title"  name="title"/>
+            <input pInputText type="text" id="title"  placeholder="Titulo" formControlName="title" name="title" styleClass="ng-dirty ng-invalid mr-2"/>
+            <p-message *ngIf="!this.bookForm.get('title')!.valid && this.bookForm.get('title')!.dirty" severity="error" text="Campo inválido "></p-message>
         </div>
         <div>
             <input pInputText id="author" placeholder="Autor" formControlName="author" name="author"/>
+            <p-message *ngIf="!this.bookForm.get('author')!.valid && this.bookForm.get('author')!.dirty" severity="error" text="Campo inválido "></p-message>
         </div>
         <div id="category"> 
             <p-dropdown  placeholder="Categoria" formControlName="category" [options]="(categories$ | async)!" optionLabel="name"></p-dropdown>
         </div>
         <div id="input-value">
             <span class="p-inputgroup-addon">R$</span>
-            <input formControlName="value" type="number" pInputText placeholder="Price" step="0.00" />                
+            <input formControlName="value" type="number" pInputText placeholder="Price" step="0.00" />    
+            <p-message *ngIf="!this.bookForm.get('value')!.valid && this.bookForm.get('value')!.dirty" severity="error" text="Campo inválido "></p-message>            
         </div>
         <div id="book-register-actions">
+            <p-button styleClass="p-button-danger" (click)="onCancel()">Cancelar</p-button> 
             <p-button styleClass="p-button-success" [disabled]="!bookForm.valid" id="book-register-confirmation" type="submit" >Registrar</p-button>
-            <p-button styleClass="p-button-danger" (click)="onCancel()">Cancelar</p-button>
         </div>    
     </form>
 </div>

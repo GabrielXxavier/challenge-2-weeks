@@ -1,23 +1,38 @@
 <div id="book-list">
-    <div *ngFor="let book of books$ | async" id="book-card">    
-        <h3>{{book.title}}</h3>
-        <div id="book-category-price">
-            <p>{{book.category.name }}</p>
-            <span><h4>R$: {{book.value}}</h4></span>
-            
-        </div>
-        <p><strong>Autor:</strong> {{book.author}}</p>
-        <div id="book-actions"> 
-            <button id="book-edit" type="button"  (click)="showEdit = true; bookEditSelected = book">Editar</button>
-            <button id="book-delete" type="button" (click)="showDelete = true ; bookDeleteSelected = (book)">Excluir</button>
-        </div>
-        
-    </div>
-    <div *ngIf="showDelete" id="book-delete-confirmation">
+    <p-table [value]="(books$ | async )!" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Titulo</th>
+            <th> Category</th>
+            <th>Autor</th>
+            <th>Valor</th>
+            <th>Ações</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-book>
+        <tr>
+            <td>{{ book.title }}</td>
+            <td>{{ book.category.name }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.value }}</td>
+            <p-button icon="pi pi-pencil"
+                      styleClass="p-button-sm p-button-outlined "
+                      styles="margin-right: 20px"
+                      [rounded]="true"
+                      (click)="showEdit = true; bookEditSelected = book">     
+            </p-button>
+            <p-button icon="pi pi-times"
+                      styleClass="p-button-danger p-button-outlined"
+                      [rounded]="true"
+                      (click)="showDelete = true ; bookDeleteSelected = (book)">
+            </p-button>
+        </tr>
+    </ng-template>
+</p-table>
+<div *ngIf="showDelete" id="book-delete-confirmation">
         <app-book-delete (getShowDelete)="showDelete = $event" [book]="bookDeleteSelected"></app-book-delete>
     </div>
     <div *ngIf="showEdit" id="book-edit-confirmation">
         <app-book-edit (getShowEdit)="showEdit = $event" [book]="bookEditSelected"></app-book-edit>
     </div>
-    
 <div>

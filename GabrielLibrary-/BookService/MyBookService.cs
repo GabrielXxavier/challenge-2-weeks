@@ -82,7 +82,7 @@ namespace BookService
                 }
            }catch (Exception ex)
             {
-                throw new Exception("Error retrieving books: " + ex.Message);
+                throw new Exception("Error no servidor" + ex.Message);
             }
 
             return response;

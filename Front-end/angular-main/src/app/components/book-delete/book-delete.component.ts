@@ -13,21 +13,18 @@ export class BookDeleteComponent {
   @Output() getShowDelete = new EventEmitter<boolean>();
   @Input() book? : Book ;
  
+  constructor(private bookService: BookService) {} 
 
-  constructor(private bookService: BookService) {
-        
-  } 
-
+  
   DeleteBook() {
-    
-    this.bookService.deleteBook(this.book?.id).subscribe(() => {
+    this.bookService.deleteBook(this.book!.id).subscribe(() => {
       this.getShowDelete.emit(false);
       this.bookService.triggerRefresh()
-    });
-      
-  }
+
+    }) 
+  };
   
   onCancel(){
     this.getShowDelete.emit(false);
-  }
+  };
 }

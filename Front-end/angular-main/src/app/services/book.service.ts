@@ -27,7 +27,7 @@ export class BookService {
         this.refreshSubject.next();
     }
     
-    getBooks(){
+    getBooks(): Observable<Book[]>{
         return this.httpClient.get<Book[]>(this.apiUrl).pipe(tap(books => {
             this.sortedBooks(books);}));
     }

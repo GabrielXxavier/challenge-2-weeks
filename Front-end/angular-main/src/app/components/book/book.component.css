@@ -60,14 +60,10 @@
 #book-delete{
     cursor: pointer;
     width: 50%;
-    background-color: #ffff;
-    padding: 8px 20px;
-    border-radius:5%;
-    border: 1px solid red;
-    color: red;
-    font-size: 16px;
 }
-
+.p-button{
+    width: 20px;
+}
 #book-delete-confirmation{
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -85,4 +81,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.p-button-margin{
+    margin-right: 0.5vw;
 }

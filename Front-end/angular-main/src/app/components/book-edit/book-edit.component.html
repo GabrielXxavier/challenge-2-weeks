@@ -3,20 +3,24 @@
     <form [formGroup]="bookEditForm" (ngSubmit)="onSubmit()">
         <div>
             <input pInputText ype="text" id="title"  placeholder="Titulo" formControlName="title"  name="title"/>
+            <p-message *ngIf="!this.bookEditForm.get('title')!.valid && this.bookEditForm.get('title')!.dirty" severity="error" text="Campo inválido "></p-message>
         </div>
         <div>
             <input pInputText id="author" placeholder="Autor" formControlName="author" name="author"/>
+             <p-message *ngIf="!this.bookEditForm.get('author')!.valid && this.bookEditForm.get('author')!.dirty" severity="error" text="Campo inválido "></p-message>
         </div>
         <div id="category"> 
             <p-dropdown  placeholder="Categoria" formControlName="category" [options]="(categories$ | async)!" optionLabel="name"></p-dropdown>
         </div>
         <div id="input-value">
             <span class="p-inputgroup-addon">R$</span>
-            <input formControlName="value" type="number" pInputText placeholder="Price" step="0.00" />                
+            <input formControlName="value" type="number" pInputText placeholder="Price" step="0.00" /> 
+             <p-message *ngIf="!this.bookEditForm.get('value')!.valid && this.bookEditForm.get('value')!.dirty" severity="error" text="Campo inválido "></p-message>               
         </div>
         <div id="book-edit-actions">
-            <p-button styleClass="p-button-success" [disabled]="!bookEditForm.valid" id="book-register-confirmation" type="submit" >Registrar</p-button>
-            <p-button styleClass="p-button-danger" (click)="onCancel()">Cancelar</p-button>
+           
+            <p-button styleClass="p-button-danger"  (click)="onCancel()">Cancelar</p-button> 
+            <p-button styleClass="p-button-success" [disabled]="!bookEditForm.valid || !bookEditForm.dirty" id="book-register-confirmation" type="submit" >Editar</p-button>
         </div>    
     </form>
 </div>
